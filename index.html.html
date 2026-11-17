@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maria Clara Maranhão Franco — Portfólio</title>
+<style>
+:root{--bg:#0B1120;--card:#1E293B;--bd:#334155;--t:#FFFFFF;--p:#CBD5E1;--ac:#F59E0B;--on:#0B1120;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--p);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2,h3{color:var(--t);line-height:1.2;margin:0 0 .6em}
+a{color:inherit}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(11,17,32,.6);-webkit-backdrop-filter:blur(14px) saturate(140%);backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;padding:12px 20px;flex-wrap:wrap;gap:8px}
+nav b{color:var(--t)}nav div a{margin-left:16px;text-decoration:none;color:var(--p);font-weight:500}nav div a:hover{color:var(--ac)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#0B1120;z-index:30}
+section{max-width:1100px;margin:auto;padding:64px 20px}
+.badge{display:inline-block;border:1px solid var(--ac);color:var(--ac);padding:6px 14px;border-radius:99px;font-size:.85rem;font-weight:600}
+#inicio{padding-top:80px}#inicio h1{font-size:clamp(2.2rem,6vw,3.8rem);margin:20px 0 14px}
+#inicio p{font-size:1.15rem;max-width:720px}
+.btn{display:inline-block;background:var(--ac);color:var(--on);font-weight:700;padding:12px 22px;border-radius:8px;text-decoration:none;border:2px solid var(--ac);cursor:pointer;font-size:1rem;font-family:inherit}
+.btn.s{background:transparent;color:var(--t);border-color:var(--bd)}.btn.s:hover{border-color:var(--ac)}
+.row{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+h2{font-size:1.9rem;border-left:4px solid var(--ac);padding-left:12px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:28px}
+.box,.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:20px}
+.box h3{font-size:1rem;color:var(--ac)}.tags span{display:inline-block;background:var(--bg);border:1px solid var(--bd);border-radius:6px;padding:3px 9px;margin:3px 3px 0 0;font-size:.85rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.card{display:flex;flex-direction:column;gap:10px}.card h3{font-size:1.1rem;margin:0}.card p{margin:0;font-size:.93rem;flex:1}
+.tag{color:var(--ac);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+.card .row{margin-top:6px}.card .btn{padding:8px 14px;font-size:.88rem}
+#m{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;z-index:50;padding:16px}
+#m.o{display:flex}
+#mb{background:var(--card);border:1px solid var(--bd);border-radius:14px;max-width:680px;max-height:88vh;overflow:auto;padding:26px;position:relative;width:100%}
+#mb h4{color:var(--ac);margin:18px 0 4px}#mb p{margin:0}
+#x{position:absolute;top:10px;right:14px;background:none;border:0;color:var(--t);font-size:1.8rem;cursor:pointer}
+.links{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}
+footer{border-top:1px solid var(--bd);text-align:center;padding:28px 20px;font-size:.9rem}
+footer a{margin:0 10px;color:var(--ac)}
+body{overflow-x:clip}
+#inicio{position:relative}
+#inicio::before{content:"";position:absolute;z-index:-1;top:-80px;bottom:0;left:50%;width:100vw;transform:translateX(-50%);background:radial-gradient(ellipse 70% 60% at 30% 20%,rgba(245,158,11,.16),transparent 70%),radial-gradient(ellipse 50% 50% at 85% 60%,rgba(59,130,246,.10),transparent 70%)}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-top:40px}
+.metrics div{background:rgba(30,41,59,.7);border:1px solid var(--bd);border-radius:12px;padding:16px 18px}
+.metrics b{display:block;color:var(--ac);font-size:1.6rem;line-height:1.2}
+.metrics span{font-size:.85rem}
+.card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.card:hover{transform:translateY(-6px);border-color:var(--ac);box-shadow:0 0 0 1px var(--ac),0 14px 34px rgba(245,158,11,.2)}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 24px}
+.filters button{background:transparent;color:var(--p);border:1px solid var(--bd);border-radius:99px;padding:8px 16px;cursor:pointer;font:inherit;font-size:.9rem;transition:.2s}
+.filters button:hover{border-color:var(--ac);color:var(--t)}
+.filters button.on{background:var(--ac);border-color:var(--ac);color:var(--on);font-weight:700}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pills span{font:600 .74rem ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--ac);background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.35);border-radius:99px;padding:2px 10px}
+.pipe{margin:10px 0 0;padding-left:22px}.pipe li{margin-bottom:10px}.pipe b{color:var(--t)}
+details{margin-top:18px;border:1px solid var(--bd);border-radius:10px;background:var(--bg)}
+summary{cursor:pointer;padding:10px 14px;color:var(--ac);font-weight:600}
+pre{margin:0;padding:14px;overflow-x:auto;white-space:pre-wrap;border-top:1px solid var(--bd)}
+code{font:.82rem/1.7 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--p)}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><b>M. C. Franco</b><div><a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a></div></nav>
+
+<section id="inicio">
+<span class="badge">Engenharia de Produção • Lean Six Sigma Green Belt • Automação com IA</span>
+<h1>Maria Clara Maranhão Franco</h1>
+<p>Transformando operações complexas em fluxos eficientes por meio de gestão de processos, análise de dados e soluções em Inteligência Artificial.</p>
+<div class="row"><a class="btn" href="#projetos">Ver Projetos</a><a class="btn s" href="https://www.linkedin.com/in/maria-clara-m-franco-0b76a8332" target="_blank" rel="noopener noreferrer">Conectar no LinkedIn</a><a class="btn s" href="https://github.com/engenhariamfranco" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+<div class="metrics"><div><b>1º Lugar</b><span>Urban Hacking UFMS</span></div><div><b>7+ Cases</b><span>IA, Dados &amp; Processos</span></div><div><b>Green Belt</b><span>Lean Six Sigma</span></div><div><b>AI Builder</b><span>Gemini, Cloud &amp; Python</span></div></div>
+</section>
+
+<section id="sobre">
+<h2>Sobre</h2>
+<p>Sou estudante de Engenharia de Produção na Universidade Federal de Mato Grosso do Sul (UFMS) e certificada Lean Six Sigma Green Belt, com perfil analítico, organizado e orientado à melhoria contínua. Minha atuação une gestão de operações, estruturação de processos, análise de dados e automação com Inteligência Artificial em ambientes acadêmicos, empresariais e de inovação.</p>
+<p>Atualmente, atuo como Pesquisadora no Hub PIME / AGINOVA (UFMS), estruturando indicadores de desempenho (KPIs) e fluxos operacionais para o ecossistema de inovação, e como Vice-Presidente Operacional na Múltipla Júnior Consultoria, onde estruturei o departamento de Operações desde a sua criação, implementando Procedimentos Operacionais Padrão (POPs), mapeamento de fluxos e gestão de KPIs. Também desenvolvo pesquisas aplicadas em otimização de processos para o Ministério da Agricultura e Pecuária (SPOA/MAPA) e projetos de extensão voltados à automação de rotinas administrativas com Google Cloud, Gemini e Claude Code.</p>
+<p>Anteriormente, atuei como Gerente de Projetos na Múltipla Júnior (liderando o projeto de maior impacto da empresa em 2025 com metodologia Scrum) e na área de Planejamento e Análise Financeira (FP&amp;A) da MSGÁS, consolidando experiência prática na tomada de decisão orientada por dados.</p>
+<div class="skills">
+<div class="box tags"><h3>Dados &amp; Programação</h3><span>Python</span><span>Power BI</span><span>Excel Avançado (PROCX, Tabelas Dinâmicas)</span><span>Google Apps Script</span><span>Análise de Dados</span><span>Automação de Rotinas</span></div>
+<div class="box tags"><h3>IA &amp; Engenharia de Prompt</h3><span>Google Cloud</span><span>Gemini</span><span>Claude Code</span><span>System Instructions</span><span>Chain-of-Thought</span><span>Grounding &amp; RAG</span><span>Guardrails</span></div>
+<div class="box tags"><h3>Operações &amp; Processos</h3><span>Lean Six Sigma Green Belt</span><span>BPMN</span><span>POPs</span><span>Gestão de Operações</span><span>KPIs</span><span>PCP</span></div>
+<div class="box tags"><h3>Gestão &amp; Finanças</h3><span>Scrum</span><span>Gestão de Projetos</span><span>FP&amp;A</span><span>Fluxo de Caixa</span><span>Orçamento Base Zero (OBZ)</span></div>
+</div>
+</section>
+
+<section id="projetos">
+<h2>Projetos &amp; Cases</h2>
+<div class="filters" id="f"><button class="on" data-f="all">Todos</button><button data-f="ia">IA &amp; Automação</button><button data-f="dg">Dados &amp; Gestão</button><button data-f="po">Processos &amp; Operações</button></div>
+<div class="grid" id="g"></div>
+</section>
+
+<section id="contato">
+<h2>Contato</h2>
+<p>Vamos conversar sobre operações, processos, dados ou inovação?</p>
+<div class="links">
+<a class="btn" href="https://www.linkedin.com/in/maria-clara-m-franco-0b76a8332" target="_blank" rel="noopener noreferrer">in&nbsp; LinkedIn</a>
+<a class="btn s" href="https://github.com/engenhariamfranco" target="_blank" rel="noopener noreferrer">&lt;/&gt; GitHub</a>
+<a class="btn s" href="http://lattes.cnpq.br/2729500760750334" target="_blank" rel="noopener noreferrer">📄 Currículo Lattes</a>
+<a class="btn s" href="mailto:engenhariamfranco@gmail.com">✉ engenhariamfranco@gmail.com</a>
+</div>
+<p>📍 Campo Grande, MS</p>
+</section>
+
+<footer>
+<a href="https://www.linkedin.com/in/maria-clara-m-franco-0b76a8332" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="http://lattes.cnpq.br/2729500760750334" target="_blank" rel="noopener noreferrer">Lattes</a><a href="https://github.com/engenhariamfranco" target="_blank" rel="noopener noreferrer">GitHub</a><a href="mailto:engenhariamfranco@gmail.com">E-mail</a>
+<p>© 2026 Maria Clara Maranhão Franco. Todos os direitos reservados.</p>
+</footer>
+
+<div id="m"><div id="mb" role="dialog" aria-modal="true"><button id="x" aria-label="Fechar">×</button><div id="mc"></div></div></div>
+
+<script>
+const P=[
+{t:"1º Lugar • Maratona de Inovação & Produto Digital",n:"Urban Hacking UFMS — Solução para Revitalização do Autocine em Comunidade",r:"Projeto campeão (1º Lugar) da maratona de inovação Urban Hacking UFMS (Edital nº 322/2026 - PROECE/PROCIDS/AGINOVA/UFMS em parceria com o Sebrae/MS), realizada em setembro de 2026 durante o Festival UFMS Mais Cultura para propor soluções de ocupação e revitalização do Autocine UFMS em Campo Grande.",p:"Após anos desativado, o Autocine UFMS precisava de estratégias sustentáveis para sua nova fase de reativação, enfrentando o desafio de engajar estudantes e a comunidade externa, atrair públicos diversos ao longo do ano, organizar fluxos de pessoas e conectar o espaço cultural à cidade.",s:"Em equipe, desenvolvemos uma proposta estratégica aliada a um protótipo de aplicativo interativo voltado à gestão de programação, engajamento comunitário e experiência do visitante no Autocine UFMS. A solução integrou visão de operações, fluxo de público e tecnologia para tornar o espaço atrativo e sustentável de forma contínua.",e:"Uso de Role Prompting (arquitetura de produto e experiência do usuário) combinado com restrições de negócio reais do espaço físico. As instruções sistêmicas foram estruturadas em etapas lógicas para traduzir jornadas de diferentes perfis de público e fluxos operacionais em componentes funcionais de interface, garantindo coerência entre proposta cultural e viabilidade prática.",l:["Acessar Protótipo do App","https://ufms-cultura-autocine-ufms.ai.studio"]},
+{t:"IA Generativa & Automação Institucional (SEDESI/AGINOVA - UFMS)",n:"Assistente Automatizado de Análise de Histórico Acadêmico e Avaliação Administrativa",r:"Solução desenvolvida no âmbito do projeto de extensão de Automação de Rotinas da SEDESI/AGINOVA (UFMS) para agilizar a análise documental de históricos escolares e pareceres administrativos.",p:"A conferência manual de históricos acadêmicos, equivalências e requisitos administrativos demandava alto tempo operacional da equipe técnica, com risco de gargalos e retrabalho na triagem documental.",s:"Estruturação de um assistente inteligente baseado em modelos Gemini e ecossistema Google Cloud, capaz de interpretar documentos acadêmicos, extrair métricas curriculares e apoiar a avaliação administrativa com padronização, rastreabilidade e velocidade.",e:"Aplicação de Chain-of-Thought (cadeia de pensamento) obrigando o modelo a auditar carga horária, pré-requisitos e equivalências passo a passo antes de emitir qualquer parecer. Implementação de Grounding estrito na matriz curricular e Guardrails negativos para impedir alucinações ou inferências fora das normas acadêmicas da UFMS, com Few-Shot Prompting baseado em casos reais de triagem.",l:["Testar Assistente","https://ajudante-da-coordena-o-ufms.ai.studio"]},
+{t:"Agente Especialista & Governança (Múltipla Júnior Consultoria)",n:"Agente Analisador de Propostas — Processo Eleitoral",r:"Agente de IA desenvolvido para automatizar a auditoria técnica e documental de candidaturas para a Diretoria Executiva e Conselho Fiscal da Múltipla Júnior.",p:"A avaliação das propostas de candidatura exigia o cruzamento manual extenso de cada documento com três bases normativas distintas: o Edital do Processo Eleitoral, o Modelo Oficial de Proposta e o Mapeamento de Cargos (Job Descriptions), gerando alta carga operacional e risco de subjetividade.",s:"Agente de IA Generativa estruturado com base documental incorporada (contexto normativo). Realiza auditoria automática de conformidade estrutural, avalia a consistência do diagnóstico, verifica o alinhamento ao escopo do cargo e gera parecer técnico completo, feedback construtivo para o candidato e perguntas estratégicas para a sabatina.",e:"Arquitetura baseada em injeção de contexto normativo (cruzamento simultâneo com Edital, Modelo Oficial e Job Descriptions). Uso de Persona de comissão avaliadora imparcial e Structured Output (saída padronizada) que força o agente a entregar sempre três blocos auditáveis: diagnóstico técnico de conformidade, feedback construtivo em dois parágrafos e perguntas estratégicas personalizadas para a sabatina."},
+{t:"Empreendedorismo, Tecnologia & Gestão",n:"Contei.ia — Soluções em Inteligência Artificial e Gestão",r:"Fundação e desenvolvimento da Contei IA Soluções em Tecnologia e Gestão, iniciativa voltada à criação de produtos digitais, automações inteligentes e ferramentas de apoio à gestão e tomada de decisão.",p:"Pequenas operações, gestores e profissionais enfrentam rotinas manuais repetitivas, dispersão de informações e dificuldade para transformar dados operacionais e financeiros em decisões ágeis sem depender de sistemas complexos ou caros.",s:"Desenvolvimento de soluções digitais enxutas baseadas em Inteligência Artificial Generativa, automação de fluxos e interfaces web intuitivas focadas em produtividade, organização operacional e escalabilidade.",e:"Decomposição de fluxos operacionais e financeiros em cadeias de prompts modulares (Prompt Chaining), separando a extração de dados, a validação de regras de negócio e a síntese executiva. Foco em instruções determinísticas, tratamento de exceções e clareza na saída para apoiar decisões rápidas de gestores sem necessidade de conhecimento técnico.",l:["Acessar Plataforma","https://contei-ai.hgsolucoes.com/"]},
+{t:"Otimização de Processos & Setor Público",n:"Metodologia de Otimização de Processos — SPOA/MAPA",r:"Projeto de pesquisa aplicada voltado à análise, mapeamento e melhoria de fluxos administrativos na Subsecretaria de Planejamento, Orçamento e Administração do Ministério da Agricultura e Pecuária.",p:"Processos administrativos complexos e fluxos institucionais com etapas redundantes que impactavam a agilidade operacional e a rastreabilidade das demandas internas.",s:"Desenvolvimento e implementação de metodologia estruturada de análise de processos (mapeamento BPMN, identificação de gargalos e redesenho de fluxos), promovendo padronização, eficiência operacional e suporte à governança institucional."},
+{t:"Gestão de KPIs & Ecossistema de Inovação",n:"Estruturação de Indicadores (KPIs) e Fluxos Operacionais — Hub PIME / AGINOVA (UFMS)",r:"Desenvolvimento de sistema de monitoramento de desempenho para empreendimentos incubados e automação de fluxos de cadastro e acompanhamento de mentores na Agência de Inovação da UFMS.",p:"Necessidade de centralizar informações dispersas sobre a evolução das startups incubadas, estruturar o onboarding de mentores e garantir visibilidade contínua dos resultados do hub de inovação.",s:"Modelagem de matriz de indicadores de desempenho (KPIs), criação de formulários inteligentes e fluxos automatizados de registro para mentores, além da estruturação de rotinas administrativas e logísticas para eventos institucionais."},
+{t:"Estruturação de Área & Lean Six Sigma",n:"Criação e Padronização do Departamento de Operações — Múltipla Júnior Consultoria",r:"Estruturação completa da área de Operações desde a sua fundação como Vice-Presidente Operacional, estabelecendo governança, processos padrão e cultura orientada por dados.",p:"Ausência de uma área dedicada à padronização interna, gerando variação na execução de entregas, dificuldade na distribuição equilibrada de demandas e falta de indicadores consolidados de desempenho.",s:"Definição do escopo e responsabilidades da diretoria, mapeamento de fluxos organizacionais, elaboração e implantação de Procedimentos Operacionais Padrão (POPs) e painel de monitoramento de KPIs operacionais."}
+];
+const M=[
+{c:["ia"],k:["Gemini","System Prompt","UX/Produto"],a:`ENTRADA  → perfis de público + restrições físicas do Autocine
+REGRAS   → role: arquiteto de produto/UX; propor só o que é viável no espaço
+PROCESSO → perfil → jornada → fluxo operacional → componente de interface
+SAÍDA    → protótipo: programação, engajamento e experiência do visitante`},
+{c:["ia"],k:["Gemini","Google Cloud","Chain-of-Thought","Grounding"],a:`ENTRADA  → histórico acadêmico + matriz curricular (grounding)
+REGRAS   → não inferir fora das normas UFMS; sem dado = "não verificável"
+PROCESSO → CoT: carga horária → pré-requisitos → equivalências
+SAÍDA    → parecer padronizado e rastreável`},
+{c:["ia"],k:["IA Generativa","RAG Normativo","Structured Output"],a:`ENTRADA  → proposta + Edital + Modelo Oficial + Job Descriptions
+REGRAS   → persona: comissão imparcial; julgar só pelos 3 documentos
+PROCESSO → conformidade estrutural → consistência do diagnóstico → aderência ao cargo
+SAÍDA    → 1) diagnóstico técnico 2) feedback (2 parágrafos) 3) perguntas p/ sabatina`},
+{c:["ia","dg"],k:["IA Generativa","Prompt Chaining","Gestão"],a:`ENTRADA  → dados operacionais e financeiros brutos
+REGRAS   → instruções determinísticas; tratar exceções; sem suposições
+PROCESSO → Prompt Chain: extração → validação de regras → síntese executiva
+SAÍDA    → resumo claro para decisão do gestor`},
+{c:["po"],k:["BPMN","Otimização","Setor Público"]},
+{c:["dg"],k:["KPIs","Automação de Fluxos","Dados"]},
+{c:["po","dg"],k:["Lean Six Sigma","POPs","KPIs"]}
+];
+P.forEach((x,i)=>Object.assign(x,M[i]));
+["https://github.com/engenhariamfranco/UFMS_Cultura_Autocine_UFMS","https://github.com/engenhariamfranco/Ajudante_da_Coordenacao_UFMS","https://github.com/engenhariamfranco/Multipla_Junior_Avaliador_Eleitoral_2026"].forEach((u,i)=>P[i].g=u);
+Object.assign(P[3],{
+t:"AI Builder • Assistente Financeiro no WhatsApp",
+n:"Contei.ia — Assistente Financeiro Inteligente via WhatsApp",
+r:"Assistente financeiro conversacional integrado ao WhatsApp que permite a empreendedores e usuários registrarem receitas, despesas e consultarem indicadores financeiros por meio de mensagens naturais (texto, áudio ou imagem de comprovantes), sem precisar abrir planilhas.",
+p:"A maioria dos pequenos negócios e profissionais abandona o controle financeiro por causa do atrito operacional de ter que abrir sistemas complexos ou planilhas a cada gasto, gerando perda de registros, mistura de finanças e falta de visibilidade do fluxo de caixa em tempo real.",
+s:"Desenvolvimento de um agente financeiro acessível diretamente no WhatsApp, unindo processamento de linguagem natural, classificação automática de lançamentos, persistência estruturada em banco de dados e geração de resumos gerenciais sob demanda.",
+e:`Pipeline cognitivo em 5 etapas:<ol class="pipe"><li><b>Ingestão &amp; Interpretação Multimodal (Input):</b> recepção da mensagem no WhatsApp (texto livre como "gastei 85 reais no almoço com cliente", áudio transcrito ou foto de recibo/comprovante) e normalização da entrada.</li><li><b>Classificação de Intenção (Router):</b> o agente identifica se o usuário quer registrar uma movimentação (entrada/saída), consultar saldo/relatório, corrigir um lançamento ou tirar uma dúvida financeira.</li><li><b>Extração Estruturada &amp; Categorização (Structured Output):</b> System Instructions com esquema rígido (JSON) para extrair obrigatoriamente tipo (receita/despesa), valor numérico, data de competência, categoria gerencial (ex: alimentação, operação, fornecedores, vendas) e forma de pagamento. Guardrails solicitam esclarecimento caso falte algum dado crítico, como o valor.</li><li><b>Validação &amp; Persistência:</b> cruzamento com as regras de negócio e gravação estruturada no banco de dados/planilha de controle financeiro.</li><li><b>Síntese &amp; Feedback Humanizado (Output):</b> retorno imediato no WhatsApp confirmando os dados registrados em formato limpo (checklist) ou entregando análises consolidadas do fluxo de caixa em linguagem simples e acionável.</li></ol>`,
+a:`ENTRADA  → mensagem no WhatsApp (texto, áudio transcrito ou foto de recibo)\nREGRAS   → schema JSON rígido; se faltar dado crítico (ex: valor), pedir esclarecimento\nPROCESSO → router de intenção → extração/categorização → validação → persistência\nSAÍDA    → confirmação em checklist ou resumo do fluxo de caixa em linguagem simples`});
+Object.assign(P[6],{c:["po","dg","ia"],
+t:"Estruturação de Área, Lean Six Sigma & Automação",
+n:"Criação e Padronização do Departamento de Operações — Múltipla Júnior Consultoria",
+r:"Estruturação completa da área de Operações desde a sua fundação como Vice-Presidente Operacional, aliando mapeamento de processos (POPs), gestão de KPIs e automação de auditoria documental integrando Manus, ClickUp, Google Drive e planilhas de controle.",
+p:"Além da ausência inicial de padronização interna, havia um alto esforço manual para auditar se as tarefas marcadas como concluídas no ClickUp possuíam seus respectivos entregáveis e documentos comprobatórios devidamente armazenados no repositório oficial do Google Drive, dificultando a atualização confiável dos indicadores e planilhas gerenciais.",
+s:"Definição do escopo da diretoria, mapeamento de fluxos e implantação de Procedimentos Operacionais Padrão (POPs). Para escalar a governança, implementei uma automação com o agente Manus integrando ClickUp, Google Drive e planilhas: o sistema cruza as atividades concluídas no ClickUp com os arquivos existentes no repositório do Drive, gera relatórios automáticos de conformidade/pendências documentais e alimenta a atualização da planilha de monitoramento de KPIs operacionais.",
+k:["Lean Six Sigma","POPs & BPMN","Manus AI","ClickUp & Google Drive","KPIs & Planilhas"]});
+const gh=u=>u?`<a class="btn s" href="${u}" target="_blank" rel="noopener noreferrer">Ver Código (GitHub)</a>`:"";
+const lk=l=>l?`<a class="btn" href="${l[1]}" target="_blank" rel="noopener noreferrer">${l[0]} ↗</a>`:"";
+function render(f){document.getElementById("g").innerHTML=P.map((x,i)=>f=="all"||x.c.includes(f)?`<article class="card"><span class="tag">${x.t}</span><h3>${x.n}</h3><p>${x.r}</p><div class="pills">${x.k.map(k=>`<span>${k}</span>`).join("")}</div><div class="row"><button class="btn s" data-i="${i}">Ver Detalhes</button>${lk(x.l)}${gh(x.g)}</div></article>`:"").join("")}
+render("all");
+document.getElementById("f").addEventListener("click",e=>{const b=e.target.closest("button[data-f]");if(!b)return;document.querySelectorAll("#f button").forEach(y=>y.classList.toggle("on",y===b));render(b.dataset.f)});
+const m=document.getElementById("m");
+function close(){m.classList.remove("o")}
+document.getElementById("g").addEventListener("click",e=>{const b=e.target.closest("button[data-i]");if(!b)return;const x=P[b.dataset.i];
+document.getElementById("mc").innerHTML=`<span class="tag">${x.t}</span><h3 style="margin-top:8px">${x.n}</h3><p>${x.r}</p><h4>Problema (Gargalo)</h4><p>${x.p}</p><h4>Arquitetura &amp; Solução</h4><p>${x.s}</p>${x.e?`<h4>Engenharia de Prompt &amp; Boas Práticas</h4><div>${x.e}</div>`:""}${x.a?`<details><summary>Ver Arquitetura da Instrução / Lógica</summary><pre><code>${x.a}</code></pre></details>`:""}${x.l||x.g?`<div class="row">${lk(x.l)}${gh(x.g)}</div>`:""}`;m.classList.add("o")});
+document.getElementById("x").onclick=close;m.onclick=e=>{if(e.target===m)close()};
+document.addEventListener("keydown",e=>{if(e.key==="Escape")close()});
+</script>
+</body>
+</html>
